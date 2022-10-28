@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://HUD's/Styles/Button_Text.tres" type="DynamicFont" id=1]
+[ext_resource path="res://HUD's/Styles/Fonte_Titulo.tres" type="DynamicFont" id=2]
+[ext_resource path="res://HUD's/Styles/StyleBox.tres" type="StyleBox" id=3]
+[ext_resource path="res://HUD's/HUD_Scripts/Start_Button.gd" type="Script" id=4]
+
+[node name="HUD_Principal" type="CanvasLayer"]
+
+[node name="Start_Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -92.0
+margin_top = -163.0
+margin_right = 103.0
+margin_bottom = -76.0
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+text = "Start"
+script = ExtResource( 4 )
+
+[node name="Name" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -180.0
+margin_top = 100.0
+margin_right = 180.0
+margin_bottom = 262.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Ajeum"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="Start_Button" to="Start_Button" method="_on_Start_Button_pressed"]
