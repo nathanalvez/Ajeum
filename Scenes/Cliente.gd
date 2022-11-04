@@ -9,7 +9,8 @@ enum States {
 	Default,
 	Walking, #<<<<<<<<<<<<<<<
 	Ordering,
-	Waiting
+	Waiting,
+	ProibindoComicSans
 }
 
 export var nome = ""
@@ -35,6 +36,7 @@ func _physics_process(delta):
 			Ordering()
 		States.Waiting:
 			pass
+			 
 
 func Walk():
 	targetPosition = get_parent().get_node("Player").position
