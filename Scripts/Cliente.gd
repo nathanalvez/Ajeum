@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+signal delay (countValue)
+signal StateMachine (current)
+
 enum TipoCliente {
 	Normal,
 	Famoso
@@ -10,8 +13,9 @@ enum States {
 	Walking, #<<<<<<<<<<<<<<<
 	Ordering,
 	Waiting,
-	ProibindoComicSans
 }
+
+var count = 0
 
 export var nome = ""
 
@@ -27,6 +31,10 @@ func _ready():
 	print(type)
 
 func _physics_process(delta):
+	count += 0.1
+	emit_signal("delay", count)
+	emit_signal("StateMachine", currentState)
+	
 	match currentState:
 		States.Walking:
 			Walk()
