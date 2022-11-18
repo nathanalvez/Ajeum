@@ -29,9 +29,10 @@ shape = SubResource( 1 )
 [node name="HUD_Main" parent="." instance=ExtResource( 3 )]
 
 [node name="Cliente" type="KinematicBody2D" parent="."]
-position = Vector2( 1223, 647 )
+position = Vector2( 1216, 647 )
 script = ExtResource( 4 )
 type = 1
+waypoints = [ "point1", "point2", "point3", "point4", "point5", "point6", "point7", "point8" ]
 
 [node name="Sprite" type="Sprite" parent="Cliente"]
 texture = ExtResource( 1 )
@@ -40,7 +41,48 @@ texture = ExtResource( 1 )
 position = Vector2( 1, 0 )
 shape = SubResource( 2 )
 
+[node name="Cliente2" type="KinematicBody2D" parent="."]
+position = Vector2( 127, 462 )
+script = ExtResource( 4 )
+type = 1
+waypoints = [ "point8", "point7", "point6", "point5", "point4", "point3", "point2", "point1" ]
+
+[node name="Sprite" type="Sprite" parent="Cliente2"]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cliente2"]
+position = Vector2( 1, 0 )
+shape = SubResource( 2 )
+
+[node name="point1" type="Position2D" parent="."]
+position = Vector2( 1164, 550 )
+
+[node name="point2" type="Position2D" parent="."]
+position = Vector2( 1072, 483 )
+
+[node name="point3" type="Position2D" parent="."]
+position = Vector2( 946, 424 )
+
+[node name="point4" type="Position2D" parent="."]
+position = Vector2( 796, 415 )
+
+[node name="point5" type="Position2D" parent="."]
+position = Vector2( 640, 453 )
+
+[node name="point6" type="Position2D" parent="."]
+position = Vector2( 521, 528 )
+
+[node name="point7" type="Position2D" parent="."]
+position = Vector2( 398, 580 )
+
+[node name="point8" type="Position2D" parent="."]
+position = Vector2( 286, 559 )
+
+[node name="Waypoints" type="Node2D" parent="."]
+
 [connection signal="StateMachine" from="Cliente" to="HUD_Main/Label" method="_on_Cliente_StateMachine"]
 [connection signal="delay" from="Cliente" to="HUD_Main/Label" method="_on_Cliente_delay"]
+[connection signal="StateMachine" from="Cliente2" to="HUD_Main/Label" method="_on_Cliente_StateMachine"]
+[connection signal="delay" from="Cliente2" to="HUD_Main/Label" method="_on_Cliente_delay"]
 
 [editable path="HUD_Main"]

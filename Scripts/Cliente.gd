@@ -26,45 +26,37 @@ var targetPosition = 0
 var myPosition = Vector2()
 var speed = 200
 
+export var waypoints = []
+var currentPoint = 0
+
 func _ready():
 	currentState = States.Walking
-	print(type)
+	print(waypoints.size())
 
 func _physics_process(delta):
 	count += 0.1
 	emit_signal("delay", count)
 	emit_signal("StateMachine", currentState)
-	
+
 	match currentState:
 		States.Walking:
 			Walk()
-		States.Default:
-			Default()
-		States.Ordering:
-			Ordering()
-		States.Waiting:
-			pass
-			 
 
 func Walk():
-	targetPosition = get_parent().get_node("Player").position
+
+	for i in range(waypoints.size()):
+		i = currentPoint
+		targetPosition = get_parent().get_node(waypoints[i]).position
+		print(waypoints[i])
+		break
 
 	myPosition = position.direction_to(targetPosition) * speed
 
-	if position.distance_to(targetPosition) > 100:
+	if position.distance_to(targetPosition) > 10:
 		myPosition = move_and_slide(myPosition)
 	else:
-		if type == TipoCliente.Normal:
-			print("apenas sentar-se.")
-			currentState = States.Default
-		else:
-			print("Esperar alguém puxar a cadeira para ele.")
-			currentState = States.Waiting
+		currentPoint += 1
+		#o que ele vai fazer quando ele chegar no objetivo dele.
 
-func Default():
-	print("Default")
-	currentState = States.Ordering
-	
-func Ordering():
-	print("fazendo Pedido")
-	currentState = States.Waiting
+	if currentPoint >= waypoints.size():
+		currentState = States.Default
