@@ -1,38 +1,109 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://HUD's/Styles/Button_Text.tres" type="DynamicFont" id=1]
 [ext_resource path="res://HUD's/Styles/Fonte_Titulo.tres" type="DynamicFont" id=2]
-[ext_resource path="res://HUD's/Styles/StyleBox.tres" type="StyleBox" id=3]
 [ext_resource path="res://HUD's/HUD_Scripts/Start_Button.gd" type="Script" id=4]
+[ext_resource path="res://Fonts/Afro.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 46
+use_mipmaps = true
+font_data = ExtResource( 5 )
 
 [node name="HUD_Principal" type="CanvasLayer"]
-
-[node name="Start_Button" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -92.0
-margin_top = -163.0
-margin_right = 103.0
-margin_bottom = -76.0
-custom_fonts/font = ExtResource( 1 )
-custom_styles/hover = ExtResource( 3 )
-custom_styles/normal = ExtResource( 3 )
-text = "Start"
-script = ExtResource( 4 )
 
 [node name="Name" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -180.0
-margin_top = 100.0
+margin_top = 112.0
 margin_right = 180.0
-margin_bottom = 262.0
+margin_bottom = 274.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = ExtResource( 2 )
 text = "Ajeum"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
-[connection signal="pressed" from="Start_Button" to="Start_Button" method="_on_Start_Button_pressed"]
+[node name="Start" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.5
+margin_top = -42.0
+margin_right = 130.5
+margin_bottom = 42.0
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Start"]
+anchor_left = 0.5
+anchor_top = -3.333
+anchor_right = 0.5
+anchor_bottom = -3.333
+margin_left = -103.5
+margin_top = 295.972
+margin_right = 104.5
+margin_bottom = 347.972
+custom_fonts/font = SubResource( 1 )
+text = "start"
+align = 1
+valign = 1
+
+[node name="Créditos" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -104.0
+margin_top = 80.0
+margin_right = 140.0
+margin_bottom = 156.0
+rect_scale = Vector2( 0.853881, 0.95 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Créditos"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -104.0
+margin_top = -26.0
+margin_right = 104.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 1 )
+text = "creditos"
+align = 1
+valign = 1
+
+[node name="Sair" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -104.0
+margin_top = 192.0
+margin_right = 140.0
+margin_bottom = 259.0
+rect_scale = Vector2( 0.853881, 0.95 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Sair"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -104.0
+margin_top = -25.5
+margin_right = 104.0
+margin_bottom = 34.5
+custom_fonts/font = SubResource( 1 )
+text = "sair"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="Start" to="Start" method="_on_Start_pressed"]
+[connection signal="pressed" from="Créditos" to="Créditos" method="_on_Crditos_pressed"]
+[connection signal="pressed" from="Sair" to="Sair" method="_on_Sair_pressed"]
