@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_Campainha.mp3-afdb7aa6c134487eb28aa0902dd3e31c.mp3str"
+
+[deps]
+
+source_file="res://Audios/sfx_Campainha.mp3"
+dest_files=[ "res://.import/sfx_Campainha.mp3-afdb7aa6c134487eb28aa0902dd3e31c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
