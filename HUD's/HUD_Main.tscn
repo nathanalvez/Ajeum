@@ -1,11 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Images/icon.png" type="Texture" id=1]
 [ext_resource path="res://HUD's/Styles/Button_Text.tres" type="DynamicFont" id=2]
-[ext_resource path="res://HUD's/HUD_Scripts/HUD_Main_Principal.gd" type="Script" id=3]
 [ext_resource path="res://HUD's/HUD_Scripts/Main_Menu.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Label.gd" type="Script" id=5]
 [ext_resource path="res://Fonts/ComicNeueSansID.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 1, 0.976471, 1 )
@@ -27,30 +30,90 @@ shadow_color = Color( 0.780392, 0, 0, 0.6 )
 shadow_size = 11
 shadow_offset = Vector2( 0, -5.002 )
 
-[sub_resource type="DynamicFont" id=3]
-size = 20
-font_data = ExtResource( 6 )
-
 [node name="HUD_Main" type="CanvasLayer"]
 
-[node name="Principal" type="Control" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -640.0
-margin_top = -360.0
-margin_right = 640.0
-margin_bottom = 360.0
-script = ExtResource( 3 )
-
-[node name="Pause" type="Button" parent="Principal"]
+[node name="Pause" type="Button" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -93.0
 margin_bottom = 76.0
 custom_fonts/font = ExtResource( 2 )
 text = "Pause"
+
+[node name="Nivel" type="TextureRect" parent="."]
+margin_left = 4.0
+margin_right = 104.0
+margin_bottom = 97.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Classficação" type="Label" parent="."]
+margin_left = 111.0
+margin_top = 16.0
+margin_right = 333.0
+margin_bottom = 43.0
+text = "Pontuação"
+
+[node name="Dinheiro" type="Label" parent="."]
+margin_left = 113.0
+margin_top = 58.0
+margin_right = 232.0
+margin_bottom = 83.0
+text = "$$$$"
+
+[node name="TempoPedidos" type="Control" parent="."]
+anchor_left = 0.539
+anchor_right = 0.539
+margin_left = -343.92
+margin_right = 343.08
+margin_bottom = 103.0
+
+[node name="Tempo" type="ColorRect" parent="TempoPedidos"]
+margin_top = -1.0
+margin_right = 96.0
+margin_bottom = 95.0
+color = Color( 0.113725, 0.184314, 0.313726, 1 )
+
+[node name="Label" type="Label" parent="TempoPedidos/Tempo"]
+anchor_left = 0.5
+anchor_top = 0.021
+anchor_right = 0.5
+anchor_bottom = 0.021
+margin_left = -47.5
+margin_top = -0.0160003
+margin_right = 47.5
+margin_bottom = 91.984
+text = "TEMPO"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="TempoPedidos"]
+anchor_left = 0.597
+anchor_right = 0.597
+margin_left = -258.139
+margin_right = 274.861
+margin_bottom = 99.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Esquerda" type="Button" parent="TempoPedidos/TextureRect"]
+margin_right = 59.0
+margin_bottom = 98.0
+
+[node name="Direita" type="Button" parent="TempoPedidos/TextureRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -59.0
+margin_bottom = 99.8571
+
+[node name="Label" type="Label" parent="."]
+margin_left = 161.0
+margin_top = 154.0
+margin_right = 273.0
+margin_bottom = 180.0
+custom_fonts/font = SubResource( 3 )
+text = "Placeholder"
+script = ExtResource( 5 )
 
 [node name="Menu" type="Control" parent="."]
 anchor_left = 0.5
@@ -99,14 +162,29 @@ margin_bottom = 50.0
 custom_fonts/font = ExtResource( 2 )
 text = "X"
 
-[node name="Label" type="Label" parent="."]
-margin_left = 161.0
-margin_top = 154.0
-margin_right = 273.0
-margin_bottom = 180.0
-custom_fonts/font = SubResource( 3 )
-text = "Placeholder"
-script = ExtResource( 5 )
+[node name="Receita" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -92.0
+margin_right = 98.0
+text = "Receitas"
 
-[connection signal="pressed" from="Principal/Pause" to="Menu" method="_on_Pause_pressed"]
+[node name="Estoque" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_top = -92.0
+margin_right = 198.0
+text = "Estoques"
+
+[node name="Perfil" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -92.0
+text = "Perfil"
+
+[connection signal="pressed" from="Pause" to="Menu" method="_on_Pause_pressed"]
 [connection signal="pressed" from="Menu/TextureRect/Exit" to="Menu" method="_on_Exit_pressed"]

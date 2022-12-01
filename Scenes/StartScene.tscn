@@ -4,4 +4,4 @@
 
 [node name="Canva" type="Node2D"]
 
-[node name="CanvasLayer" parent="." instance=ExtResource( 1 )]
+[node name="HUD_Principal" parent="." instance=ExtResource( 1 )]
