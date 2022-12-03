@@ -21,22 +21,19 @@ enum TipoCliente {
 
 enum States {
 	Default,
-	Entering,
 	Walking,
-	Sitting, 
-	Ordering,
 	Waiting,
-	Getting_Up,
-	Grabbing_Dish,
-	Grabbing_Cup,
-	Filling_Cup,
-	Eating,
-	Approving
-	Disapproving,
-	Paying,
-	Complaining,
-	
-	
+	Selecting_Ingredient,
+	Putting_Ingredients_At_The_Pan,
+	Cooking,
+	Finalizing_Dish,
+	Putting_Dish_At_The_Counter,
+	Cleaning_Stove,
+	Cleaning_Balcony,
+	Escorting_Client,
+	Taking_Dish_Off_Of_The_Counter,
+	Putting_Dish_On_The_Table,
+	Thanking_Client,
 }
 
 # bloco para declarar variáveis.
