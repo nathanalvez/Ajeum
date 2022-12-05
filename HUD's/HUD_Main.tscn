@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Images/icon.png" type="Texture" id=1]
 [ext_resource path="res://HUD's/Styles/Button_Text.tres" type="DynamicFont" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://HUD's/HUD_Scripts/Main_Som.gd" type="Script" id=7]
 [ext_resource path="res://HUD's/HUD_Scripts/Main_PáginaInicial.gd" type="Script" id=8]
 [ext_resource path="res://HUD's/HUD_Scripts/Main_LivroDeReceitas.gd" type="Script" id=9]
+[ext_resource path="res://Images/Assets HUD/Obj21.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=3]
 size = 20
@@ -73,9 +74,9 @@ margin_right = 343.08
 margin_bottom = 103.0
 
 [node name="Tempo" type="ColorRect" parent="TempoPedidos"]
-margin_top = -1.0
+margin_top = 16.0
 margin_right = 96.0
-margin_bottom = 95.0
+margin_bottom = 112.0
 color = Color( 0.113725, 0.184314, 0.313726, 1 )
 
 [node name="Label" type="Label" parent="TempoPedidos/Tempo"]
@@ -92,23 +93,31 @@ align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="TempoPedidos"]
-anchor_left = 0.597
-anchor_right = 0.597
-margin_left = -258.139
-margin_right = 274.861
-margin_bottom = 99.0
-texture = ExtResource( 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -229.98
+margin_top = -64.0
+margin_right = 220.02
+margin_bottom = 200.0
+texture = ExtResource( 10 )
 expand = true
+stretch_mode = 6
 
 [node name="Esquerda" type="Button" parent="TempoPedidos/TextureRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -49.0
 margin_right = 59.0
-margin_bottom = 98.0
+margin_bottom = 49.0
 
 [node name="Direita" type="Button" parent="TempoPedidos/TextureRect"]
 anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
+anchor_bottom = 0.5
 margin_left = -59.0
-margin_bottom = 99.8571
+margin_top = -49.9286
+margin_bottom = 49.9286
 
 [node name="Label" type="Label" parent="."]
 margin_left = 161.0
@@ -398,6 +407,7 @@ custom_fonts/font = ExtResource( 2 )
 text = "X"
 
 [node name="LivroDeReceitas" type="Control" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
