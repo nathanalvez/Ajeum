@@ -32,9 +32,8 @@ shape = SubResource( 1 )
 
 [node name="HUD_Main" parent="." instance=ExtResource( 3 )]
 
-[node name="Pause" parent="HUD_Main/Principal" index="0"]
-margin_left = -99.0
-margin_bottom = 99.0
+[node name="Label" parent="HUD_Main/PáginaInicial/TextureRect" index="0"]
+percent_visible = 1.0
 
 [node name="Cliente" type="KinematicBody2D" parent="."]
 position = Vector2( 1233, 395 )
