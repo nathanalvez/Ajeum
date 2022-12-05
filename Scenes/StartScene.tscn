@@ -1,7 +1,25 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://HUD's/HUD_Principal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Images/Background Ajeum.png" type="Texture" id=2]
+[ext_resource path="res://Images/sketch1670276441646.png" type="Texture" id=3]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 1 )]
+
+[node name="BackgroundAjeum" type="Sprite" parent="."]
+position = Vector2( 640.5, 363.5 )
+scale = Vector2( 0.672396, 0.726852 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sketch1670276441646" type="Sprite" parent="."]
+position = Vector2( 859.099, 355.5 )
+scale = Vector2( 0.293145, 0.293145 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
