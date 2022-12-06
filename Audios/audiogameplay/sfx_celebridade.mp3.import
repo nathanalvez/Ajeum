@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_celebridade.mp3-a17aa64d2d75273a5b3a0b1d5a3f5cfc.mp3str"
+
+[deps]
+
+source_file="res://Audios/audiogameplay/sfx_celebridade.mp3"
+dest_files=[ "res://.import/sfx_celebridade.mp3-a17aa64d2d75273a5b3a0b1d5a3f5cfc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

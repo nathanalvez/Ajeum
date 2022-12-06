@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_dinheiro.mp3-d1d74b507e2e0475019068dd1c0ff591.mp3str"
+
+[deps]
+
+source_file="res://Audios/audiogameplay/sfx_dinheiro.mp3"
+dest_files=[ "res://.import/sfx_dinheiro.mp3-d1d74b507e2e0475019068dd1c0ff591.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_Relógio.mp3-cccd34c8a7008ae4590b9bef880f3e44.mp3str"
+
+[deps]
+
+source_file="res://Audios/audiogameplay/sfx_Relógio.mp3"
+dest_files=[ "res://.import/sfx_Relógio.mp3-cccd34c8a7008ae4590b9bef880f3e44.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
