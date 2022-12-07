@@ -1,11 +1,29 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://HUD's/Styles/Button_Text.tres" type="DynamicFont" id=1]
 [ext_resource path="res://HUD's/Styles/Fonte_Titulo.tres" type="DynamicFont" id=2]
 [ext_resource path="res://HUD's/Styles/StyleBox.tres" type="StyleBox" id=3]
 [ext_resource path="res://HUD's/HUD_Scripts/Start_Button.gd" type="Script" id=4]
+[ext_resource path="res://Images/sketch1670276441646.png" type="Texture" id=5]
+[ext_resource path="res://Images/Background Ajeum.png" type="Texture" id=6]
 
-[node name="HUD_Principal" type="CanvasLayer"]
+[node name="HUD_StartScene" type="CanvasLayer"]
+
+[node name="BackgroundAjeum" type="Sprite" parent="."]
+position = Vector2( 640.5, 363.5 )
+scale = Vector2( 0.672396, 0.726852 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sketch1670276441646" type="Sprite" parent="."]
+position = Vector2( 859.099, 355.5 )
+scale = Vector2( 0.293145, 0.293145 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Start_Button" type="Button" parent="."]
 anchor_left = 0.5
@@ -25,10 +43,10 @@ script = ExtResource( 4 )
 [node name="Name" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -180.0
-margin_top = 100.0
-margin_right = 180.0
-margin_bottom = 262.0
+margin_left = -306.0
+margin_top = 94.0
+margin_right = 236.0
+margin_bottom = 279.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = ExtResource( 2 )
 text = "Ajeum"
