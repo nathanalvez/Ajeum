@@ -68,3 +68,5 @@ func Ladino():#função custom a ser chamada dentro do match/switch
 
 func Mago():#função custom a ser chamada dentro do match/switch
 	pass
+	
+	
