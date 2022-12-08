@@ -12,9 +12,13 @@ extents = Vector2( 31, 29.5 )
 radius = 34.0147
 
 [node name="Scene" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 99.0 ],
+"_edit_vertical_guides_": [ 640.0 ]
+}
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 58, 50 )
+position = Vector2( 58, 162 )
 script = ExtResource( 2 )
 classeAtual = 2
 vida = 10
@@ -27,6 +31,9 @@ position = Vector2( -1, 0 )
 shape = SubResource( 1 )
 
 [node name="HUD_Main" parent="." instance=ExtResource( 3 )]
+
+[node name="Label" parent="HUD_Main/PáginaInicial/TextureRect" index="0"]
+percent_visible = 1.0
 
 [node name="Cliente" type="KinematicBody2D" parent="."]
 position = Vector2( 1233, 395 )
