@@ -40,8 +40,10 @@ shadow_offset = Vector2( 0, -5.002 )
 [node name="Pause" type="Button" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -93.0
-margin_bottom = 76.0
+margin_left = -130.0
+margin_top = 11.0
+margin_right = -13.0
+margin_bottom = 87.0
 custom_fonts/font = ExtResource( 2 )
 text = "Pause"
 
@@ -179,17 +181,18 @@ text = "X"
 [node name="Receita" type="Button" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
+margin_left = 21.0
 margin_top = -143.0
-margin_right = 98.0
+margin_right = 119.0
 margin_bottom = -51.0
 text = "Receitas"
 
 [node name="Estoque" type="Button" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 100.0
+margin_left = 132.0
 margin_top = -143.0
-margin_right = 198.0
+margin_right = 230.0
 margin_bottom = -51.0
 text = "Estoques"
 
@@ -198,9 +201,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -98.0
-margin_top = -142.0
-margin_bottom = -50.0
+margin_left = -127.0
+margin_top = -136.0
+margin_right = -29.0
+margin_bottom = -44.0
 text = "Perfil"
 
 [node name="TelaPerfil" type="Control" parent="."]
