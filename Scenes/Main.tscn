@@ -1,20 +1,40 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Images/icon.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://HUD's/HUD_Main.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scripts/Cliente.gd" type="Script" id=4]
 [ext_resource path="res://Images/button-15388.png" type="Texture" id=5]
+[ext_resource path="res://Images/placeholders/bear.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/ClientManager.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/path.gd" type="Script" id=9]
+[ext_resource path="res://Prefabs/Scenery.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scripts/CameraControler.gd" type="Script" id=11]
 
-[sub_resource type="StreamTexture" id=3]
-flags = 4
-load_path = "res://.import/sketch1670276441646.png-b5e6fbd8ade48438748253db5eddad73.stex"
+[sub_resource type="CircleShape2D" id=4]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31, 29.5 )
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 34.0147
+[sub_resource type="Curve2D" id=6]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 172, 348, -103.238, -4.24264, 103.238, 4.24264, 392, 229, -56.5685, -12.7279, 56.5685, 12.7279, 545, 249, -67.8823, -14.1421, 67.8823, 14.1421, 736, 314, 0, 0, 0, 0, 871, 326 )
+}
+
+[sub_resource type="CircleShape2D" id=7]
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 34.0588
+
+[sub_resource type="CircleShape2D" id=10]
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 643, 10 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 10.5, 457.5 )
 
 [node name="Scene" type="Node2D"]
 __meta__ = {
@@ -22,94 +42,87 @@ __meta__ = {
 "_edit_vertical_guides_": [ 640.0 ]
 }
 
-[node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 58, 162 )
-script = ExtResource( 2 )
-classeAtual = 2
-vida = 10
-
-[node name="Sprite" type="Sprite" parent="Player"]
-position = Vector2( 487, 190 )
-scale = Vector2( 0.0877016, 0.0877016 )
-texture = SubResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( -1, 0 )
-shape = SubResource( 1 )
+[node name="Scenery" parent="." instance=ExtResource( 10 )]
+position = Vector2( 139, 543 )
 
 [node name="HUD_Main" parent="." instance=ExtResource( 3 )]
 
 [node name="Nivel" parent="HUD_Main" index="1"]
 texture = ExtResource( 5 )
 
-[node name="Cliente" type="KinematicBody2D" parent="."]
-position = Vector2( 1233, 395 )
-script = ExtResource( 4 )
-type = 1
-waypoints = [ "point1", "point2", "point3", "point4", "point5", "point6", "point7", "point8" ]
+[node name="default_client" type="KinematicBody2D" parent="."]
+position = Vector2( 890, 571 )
+script = ExtResource( 7 )
 
-[node name="Sprite" type="Sprite" parent="Cliente"]
-position = Vector2( -273, 94 )
-scale = Vector2( 1.59506, 1.59506 )
-texture = ExtResource( 1 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="default_client"]
+shape = SubResource( 4 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cliente"]
-position = Vector2( 1, 0 )
-shape = SubResource( 2 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="default_client"]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 5 )
 
-[node name="Waypoint0" type="Node" parent="."]
+[node name="path1" type="Path2D" parent="."]
+curve = SubResource( 6 )
 
-[node name="point1" type="Position2D" parent="Waypoint0"]
-position = Vector2( 1144, 549 )
+[node name="path_follow" type="PathFollow2D" parent="path1"]
+position = Vector2( 172, 348 )
+rotation = -0.797187
+loop = false
+script = ExtResource( 9 )
 
-[node name="point2" type="Position2D" parent="Waypoint0"]
-position = Vector2( 1052, 482 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="path1/path_follow"]
+shape = SubResource( 7 )
 
-[node name="point3" type="Position2D" parent="Waypoint0"]
-position = Vector2( 926, 423 )
+[node name="Table" type="Area2D" parent="."]
+position = Vector2( 443, 232 )
 
-[node name="point4" type="Position2D" parent="Waypoint0"]
-position = Vector2( 776, 414 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
+shape = SubResource( 8 )
 
-[node name="point5" type="Position2D" parent="Waypoint0"]
-position = Vector2( 620, 452 )
+[node name="CameraControler" type="KinematicBody2D" parent="."]
+position = Vector2( 621, 452 )
+collision_layer = 8
+collision_mask = 8
+script = ExtResource( 11 )
 
-[node name="point6" type="Position2D" parent="Waypoint0"]
-position = Vector2( 501, 527 )
+[node name="Camera2D" type="Camera2D" parent="CameraControler"]
+current = true
+limit_left = -450
+limit_top = -300
+limit_right = 1700
+limit_bottom = 1150
+smoothing_enabled = true
+editor_draw_limits = true
 
-[node name="point7" type="Position2D" parent="Waypoint0"]
-position = Vector2( 378, 579 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraControler"]
+shape = SubResource( 10 )
 
-[node name="point8" type="Position2D" parent="Waypoint0"]
-position = Vector2( 266, 558 )
+[node name="CameraControlerLimit" type="Node2D" parent="."]
 
-[node name="Waypoint1" type="Node" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="CameraControlerLimit"]
+collision_layer = 8
+collision_mask = 8
 
-[node name="point1" type="Position2D" parent="Waypoint1"]
-position = Vector2( 1147, 237 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraControlerLimit/StaticBody2D"]
+position = Vector2( 627, 48 )
+shape = SubResource( 9 )
 
-[node name="point2" type="Position2D" parent="Waypoint1"]
-position = Vector2( 1055, 170 )
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="CameraControlerLimit/StaticBody2D"]
+position = Vector2( 697, 811 )
+shape = SubResource( 9 )
 
-[node name="point3" type="Position2D" parent="Waypoint1"]
-position = Vector2( 929, 111 )
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CameraControlerLimit/StaticBody2D"]
+position = Vector2( 212, 426 )
+shape = SubResource( 11 )
 
-[node name="point4" type="Position2D" parent="Waypoint1"]
-position = Vector2( 779, 102 )
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CameraControlerLimit/StaticBody2D"]
+position = Vector2( 1072, 419 )
+shape = SubResource( 11 )
 
-[node name="point5" type="Position2D" parent="Waypoint1"]
-position = Vector2( 623, 140 )
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2( 1278, 697 )
 
-[node name="point6" type="Position2D" parent="Waypoint1"]
-position = Vector2( 504, 215 )
-
-[node name="point7" type="Position2D" parent="Waypoint1"]
-position = Vector2( 381, 267 )
-
-[node name="point8" type="Position2D" parent="Waypoint1"]
-position = Vector2( 269, 246 )
-
-[connection signal="StateMachine" from="Cliente" to="HUD_Main/Label" method="_on_Cliente_StateMachine"]
-[connection signal="delay" from="Cliente" to="HUD_Main/Label" method="_on_Cliente_delay"]
+[connection signal="PathOffset" from="default_client" to="path1/path_follow" method="_on_default_client_PathOffset"]
+[connection signal="body_entered" from="Table" to="default_client" method="_on_Table_body_entered"]
 
 [editable path="HUD_Main"]

@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/TAMPA COPO DE PAPEL - PROP.png-26b4bf5175fcea126fd9c24c93247d84.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Images/Raquel - Cenários/OBJETOS BANCADA ENTREGA/TAMPA COPO DE PAPEL - PROP.png"
+dest_files=[ "res://.import/TAMPA COPO DE PAPEL - PROP.png-26b4bf5175fcea126fd9c24c93247d84.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/PANELA DE PRESSÃO - PROP.png-d15927024c6c6de36bf6831a7040ea83.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Images/Raquel - Cenários/OBJETOS PAREDE FOGÃO/PANELA DE PRESSÃO - PROP.png"
+dest_files=[ "res://.import/PANELA DE PRESSÃO - PROP.png-d15927024c6c6de36bf6831a7040ea83.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
