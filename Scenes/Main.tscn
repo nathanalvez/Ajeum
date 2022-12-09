@@ -1,9 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Images/icon.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://HUD's/HUD_Main.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/Cliente.gd" type="Script" id=4]
+[ext_resource path="res://Images/button-15388.png" type="Texture" id=5]
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/sketch1670276441646.png-b5e6fbd8ade48438748253db5eddad73.stex"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 31, 29.5 )
@@ -24,7 +29,9 @@ classeAtual = 2
 vida = 10
 
 [node name="Sprite" type="Sprite" parent="Player"]
-texture = ExtResource( 1 )
+position = Vector2( 487, 190 )
+scale = Vector2( 0.0877016, 0.0877016 )
+texture = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( -1, 0 )
@@ -32,8 +39,8 @@ shape = SubResource( 1 )
 
 [node name="HUD_Main" parent="." instance=ExtResource( 3 )]
 
-[node name="Label" parent="HUD_Main/PáginaInicial/TextureRect" index="0"]
-percent_visible = 1.0
+[node name="Nivel" parent="HUD_Main" index="1"]
+texture = ExtResource( 5 )
 
 [node name="Cliente" type="KinematicBody2D" parent="."]
 position = Vector2( 1233, 395 )
@@ -42,6 +49,8 @@ type = 1
 waypoints = [ "point1", "point2", "point3", "point4", "point5", "point6", "point7", "point8" ]
 
 [node name="Sprite" type="Sprite" parent="Cliente"]
+position = Vector2( -273, 94 )
+scale = Vector2( 1.59506, 1.59506 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cliente"]
