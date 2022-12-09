@@ -5,13 +5,13 @@
 [ext_resource path="res://HUD's/Styles/StyleBox.tres" type="StyleBox" id=3]
 [ext_resource path="res://HUD's/HUD_Scripts/Start_Button.gd" type="Script" id=4]
 [ext_resource path="res://Images/sketch1670276441646.png" type="Texture" id=5]
-[ext_resource path="res://Images/Background Ajeum.png" type="Texture" id=6]
+[ext_resource path="res://Images/sketch1670276377744 verde1.png" type="Texture" id=6]
 
 [node name="HUD_StartScene" type="CanvasLayer"]
 
 [node name="BackgroundAjeum" type="Sprite" parent="."]
 position = Vector2( 640.5, 363.5 )
-scale = Vector2( 0.672396, 0.726852 )
+scale = Vector2( 0.420297, 0.287963 )
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
