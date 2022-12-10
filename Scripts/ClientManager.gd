@@ -38,13 +38,14 @@ func _physics_process(delta):
 func Walking():
 	myPosition = position.direction_to(pathToFollow) * speed
 
-	if position.distance_to(pathToFollow) > 10:
+	if position.distance_to(pathToFollow) > 2:
 		myPosition = move_and_slide(myPosition) 
 	else:
-		pathOffset += 0.009
+		pathOffset += 0.001
 	
 	if pathOffset > 1:
-		pathOffset = 1.2
+		pathOffset = 0
+		$AnimatedSprite.play("direita")
 
 func OnTable():
 	count += 0.1
@@ -57,4 +58,4 @@ func SignalsEmit():
 
 
 func _on_Table_body_entered(body):
-	state = States.onTable
+	$AnimatedSprite.play("esquerda")

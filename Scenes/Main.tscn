@@ -1,27 +1,32 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Images/Personagens/Sprite_Lude_Milla_Espelhado.png" type="Texture" id=1]
 [ext_resource path="res://Images/Personagens/Sprite_Lude_Milla.png" type="Texture" id=2]
 [ext_resource path="res://HUD's/HUD_Main.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Images/button-15388.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/ClientManager.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/path.gd" type="Script" id=9]
 [ext_resource path="res://Prefabs/Scenery.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scripts/CameraControler.gd" type="Script" id=11]
 
 [sub_resource type="CircleShape2D" id=4]
+radius = 14.1421
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "default",
+"name": "esquerda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "direita",
 "speed": 5.0
 } ]
 
-[sub_resource type="Curve2D" id=6]
+[sub_resource type="Curve2D" id=12]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 172, 348, -103.238, -4.24264, 103.238, 4.24264, 392, 229, -56.5685, -12.7279, 56.5685, 12.7279, 545, 249, -67.8823, -14.1421, 67.8823, 14.1421, 736, 314, 0, 0, 0, 0, 871, 326 )
+"points": PoolVector2Array( 0, 0, 0, 0, -68, 466, -75.205, 26.9391, 75.205, -26.9391, 174, 372, -77.4499, -2.24492, 77.4499, 2.24492, 334, 335, -51.6333, -4.48985, 51.6333, 4.48985, 485, 383, -57.2456, 22.4492, 57.2456, -22.4492, 654, 358, -68.974, 4.75683, 68.974, -4.75683, 837, 258, -17.8381, -16.6489, 17.8381, 16.6489, 957, 304, -16.6489, -14.2705, 16.6489, 14.2705, 1093, 401, -13.0813, -58.2711, 13.0813, 58.2711, 1318, 540, 17.8381, -9.51366, -17.8381, 9.51366, 1154, 698, 47.5683, -23.7841, -47.5683, 23.7841, 993, 779, 38.0546, -15.4597, -38.0546, 15.4597, 855, 849, 46.3791, 2.37841, -46.3791, -2.37841, 640, 897, 24.9733, 23.7841, -24.9733, -23.7841, 547, 853, 17.8381, 16.6489, -17.8381, -16.6489, 414, 732, 35.6762, 22.5949, -35.6762, -22.5949, 288, 660, 26.9391, 13.4695, -26.9391, -13.4695, 181, 573, 40.4086, -2.24492, -40.4086, 2.24492, 69, 539, 12.3471, 4.48985, -12.3471, -4.48985, -71, 484 )
 }
 
 [sub_resource type="CircleShape2D" id=7]
@@ -48,11 +53,8 @@ position = Vector2( 136, 543 )
 
 [node name="HUD_Main" parent="." instance=ExtResource( 3 )]
 
-[node name="Nivel" parent="HUD_Main" index="7"]
-texture = ExtResource( 5 )
-
 [node name="default_client" type="KinematicBody2D" parent="."]
-position = Vector2( 102, 249 )
+position = Vector2( -132, 438 )
 scale = Vector2( 0.8, 0.8 )
 script = ExtResource( 7 )
 
@@ -60,25 +62,27 @@ script = ExtResource( 7 )
 shape = SubResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="default_client"]
+position = Vector2( 0, -58.75 )
 scale = Vector2( 0.135381, 0.135381 )
 frames = SubResource( 5 )
+animation = "direita"
 
 [node name="path1" type="Path2D" parent="."]
-curve = SubResource( 6 )
+curve = SubResource( 12 )
 
 [node name="path_follow" type="PathFollow2D" parent="path1"]
-position = Vector2( 172, 348 )
-rotation = -0.79719
-loop = false
+position = Vector2( -63.1488, 464.053 )
+rotation = -0.38115
+offset = 5.22
 script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="path1/path_follow"]
 shape = SubResource( 7 )
 
-[node name="Table" type="Area2D" parent="."]
-position = Vector2( 443, 232 )
+[node name="anim" type="Area2D" parent="."]
+position = Vector2( 1324, 557 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="anim"]
 shape = SubResource( 8 )
 
 [node name="CameraControler" type="KinematicBody2D" parent="."]
@@ -125,6 +129,6 @@ shape = SubResource( 11 )
 position = Vector2( 1278, 697 )
 
 [connection signal="PathOffset" from="default_client" to="path1/path_follow" method="_on_default_client_PathOffset"]
-[connection signal="body_entered" from="Table" to="default_client" method="_on_Table_body_entered"]
+[connection signal="body_entered" from="anim" to="default_client" method="_on_Table_body_entered"]
 
 [editable path="HUD_Main"]

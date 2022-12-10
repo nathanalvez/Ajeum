@@ -306,7 +306,6 @@ margin_bottom = 132.0
 rect_scale = Vector2( 0.41, 0.41 )
 icon = ExtResource( 17 )
 flat = true
-icon_align = 1
 
 [node name="TelaPerfil" type="Control" parent="."]
 visible = false

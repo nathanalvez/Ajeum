@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://Prefabs/ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Images/Raquel - Cenários/ESTRUTUTA/PAREDE FOGÃO - PROP.png" type="Texture" id=2]
@@ -32,13 +32,51 @@
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS SALAO RESTAURANTE/ALMOFADA 03 - PROP.png" type="Texture" id=30]
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS SALAO RESTAURANTE/ALMOFADA 05 - PROP.png" type="Texture" id=31]
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/PRATELEIRA ALTA PAREDE PIA - PROP.png" type="Texture" id=32]
-[ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/PRATELEIRA LATA PAREDE FOGÃO - PROP.png" type="Texture" id=33]
+[ext_resource path="res://Images/Raquel - Cenários/BANCADA BEBIDAS PAGAMENTO/BANCADA BEBIDAS E PAGAMENTO - PROP.png" type="Texture" id=33]
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/PRATELEIRA BAIXA PAREDE PIA - PROP.png" type="Texture" id=34]
-[ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/PRATELEIRA BAIXA FOGÃO - PROP.png" type="Texture" id=35]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS BANCADA ENTREGA/BANCADA ENTREGAS - PROP.png" type="Texture" id=35]
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/GELADEIRA - PROP.png" type="Texture" id=36]
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/BANCADA + PIA - PROP.png" type="Texture" id=37]
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE FOGÃO/BANCADA FOGÃO - PROP.png" type="Texture" id=38]
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/TÁBUA DE MADEIRA - PROP.png" type="Texture" id=39]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC PAREDE FOGÃO - PROP.png" type="Texture" id=40]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC JOGO PANELAS PRETAS - PROP.png" type="Texture" id=41]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC JOGO PANELAS COLORS - PROP.png" type="Texture" id=42]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC JOGO PANELAS MARRONS - PROP.png" type="Texture" id=43]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC XÍCARAS PRETAS - PROP.png" type="Texture" id=44]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC XÍCARAS BRANCAS - PROP.png" type="Texture" id=45]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/PANO DE PRATO VERDE - PROP.png" type="Texture" id=46]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC COPOS VIDRO VERMELHO - PROP.png" type="Texture" id=47]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC XÍCARS COLORS - PROP.png" type="Texture" id=48]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC BOLS MARRONS - PROP.png" type="Texture" id=49]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC BOLS PRETOS - PROP.png" type="Texture" id=50]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC TAÇAS VIDRO AZUL - PROP.png" type="Texture" id=51]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/PANO DE PRATO LARANJA - PROP.png" type="Texture" id=52]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC COPOS VIDRO AZUL - PROP.png" type="Texture" id=53]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC TAÇAS VIDRO VERMELHO - PROP.png" type="Texture" id=54]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC BOLS COLORS - PROP.png" type="Texture" id=55]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/PANO DE PRATO AZUL - PROP.png" type="Texture" id=56]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/BLOC - BANDEJA SUPORTE CLIENTES - PROP.png" type="Texture" id=57]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/BLOC PRATOS COLORS - PROP.png" type="Texture" id=58]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/FACA - PROP.png" type="Texture" id=59]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/PBLOC PRATOS PRETOS - PROP.png" type="Texture" id=60]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/BLOC PRATOS MARRONS - PROP.png" type="Texture" id=61]
+[ext_resource path="res://Images/Raquel - Cenários/BANCADA BEBIDAS PAGAMENTO/MAQUINA DE BEBIDA 08 - PROP.png" type="Texture" id=62]
+[ext_resource path="res://Images/Raquel - Cenários/BANCADA BEBIDAS PAGAMENTO/MAQUINA DE BEBIDA 05 - PROP.png" type="Texture" id=63]
+[ext_resource path="res://Images/Raquel - Cenários/BANCADA BEBIDAS PAGAMENTO/MAQUINA DE BEBIDA 06 - PROP.png" type="Texture" id=64]
+[ext_resource path="res://Images/Raquel - Cenários/BANCADA BEBIDAS PAGAMENTO/MAQUINA DE BEBIDA 07 - PROP.png" type="Texture" id=65]
+[ext_resource path="res://Images/Raquel - Cenários/BANCADA BEBIDAS PAGAMENTO/CAIXA REGISTRADORA LIGADA - PROP.png" type="Texture" id=66]
+[ext_resource path="res://Images/Raquel - Cenários/BANCADA BEBIDAS PAGAMENTO/MAQUINA DE BEBIDA 03 - PROP.png" type="Texture" id=67]
+[ext_resource path="res://Images/Raquel - Cenários/BANCADA BEBIDAS PAGAMENTO/MAQUINA DE BEBIDA 01 - PROP.png" type="Texture" id=68]
+[ext_resource path="res://Images/Raquel - Cenários/BANCADA BEBIDAS PAGAMENTO/MAQUINA DE BEBIDA 04 - PROP.png" type="Texture" id=69]
+[ext_resource path="res://Images/Raquel - Cenários/BANCADA BEBIDAS PAGAMENTO/MAQUINA DE BEBIDA 02 - PROP.png" type="Texture" id=70]
+[ext_resource path="res://Images/Raquel - Cenários/PRATOS E INGREDIENTES/EGUSI PRONTO - PROP.png" type="Texture" id=71]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS BANCADA ENTREGA/MAQUINA DE CAFÉ - PROP.png" type="Texture" id=72]
+[ext_resource path="res://Images/Raquel - Cenários/PRATOS E INGREDIENTES/ACARAJÉ PRONTO - PROP.png" type="Texture" id=73]
+[ext_resource path="res://Images/Raquel - Cenários/PRATOS E INGREDIENTES/MUNGUNZÁ PRONTO - PROP.png" type="Texture" id=74]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/JOGO DE TALHERES - PROP.png" type="Texture" id=75]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS BANCADA ENTREGA/CARDÁPIO - PROP.png" type="Texture" id=76]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE FOGÃO/CESTA DE VAZIA - PROP.png" type="Texture" id=77]
 
 [node name="Scenery" type="Node2D"]
 scale = Vector2( 0.2, 0.2 )
@@ -86,10 +124,6 @@ position = Vector2( 3153, -11 )
 
 [node name="ground2" parent="Ground" instance=ExtResource( 1 )]
 position = Vector2( 1565, 920 )
-
-[node name="Ilha-Prop" type="Sprite" parent="."]
-position = Vector2( 2380, -1585 )
-texture = ExtResource( 4 )
 
 [node name="Tables" type="Node2D" parent="."]
 position = Vector2( 0, 885 )
@@ -158,6 +192,31 @@ position = Vector2( 4475, -2265 )
 rotation = -0.0374146
 texture = ExtResource( 26 )
 
+[node name="JogoDeTalheres-Prop" type="Sprite" parent="Tables/conjGrandeMesa"]
+position = Vector2( 4265, -2425 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="JogoDeTalheres-Prop2" type="Sprite" parent="Tables/conjGrandeMesa"]
+position = Vector2( 4380, -2365 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="JogoDeTalheres-Prop3" type="Sprite" parent="Tables/conjGrandeMesa"]
+position = Vector2( 4505, -2300 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="JogoDeTalheres-Prop4" type="Sprite" parent="Tables/conjGrandeMesa"]
+position = Vector2( 4610, -2240 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="JogoDeTalheres-Prop5" type="Sprite" parent="Tables/conjGrandeMesa"]
+position = Vector2( 4725, -2180 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
 [node name="conjGrandeMesa2" type="Node2D" parent="Tables"]
 position = Vector2( 860, 505 )
 
@@ -196,6 +255,31 @@ position = Vector2( 4475, -2265 )
 rotation = -0.0374146
 texture = ExtResource( 26 )
 
+[node name="JogoDeTalheres-Prop6" type="Sprite" parent="Tables/conjGrandeMesa2"]
+position = Vector2( 4279, -2432 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="JogoDeTalheres-Prop7" type="Sprite" parent="Tables/conjGrandeMesa2"]
+position = Vector2( 4394, -2372 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="JogoDeTalheres-Prop8" type="Sprite" parent="Tables/conjGrandeMesa2"]
+position = Vector2( 4519, -2307 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="JogoDeTalheres-Prop9" type="Sprite" parent="Tables/conjGrandeMesa2"]
+position = Vector2( 4624, -2247 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="JogoDeTalheres-Prop10" type="Sprite" parent="Tables/conjGrandeMesa2"]
+position = Vector2( 4739, -2187 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
 [node name="conjGrandeMesa3" type="Node2D" parent="Tables"]
 position = Vector2( 1750, 1010 )
 
@@ -233,6 +317,58 @@ texture = ExtResource( 31 )
 position = Vector2( 4475, -2265 )
 rotation = -0.0374146
 texture = ExtResource( 26 )
+
+[node name="JogoDeTalheres-Prop11" type="Sprite" parent="Tables/conjGrandeMesa3"]
+position = Vector2( 4289, -2427 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="JogoDeTalheres-Prop12" type="Sprite" parent="Tables/conjGrandeMesa3"]
+position = Vector2( 4404, -2367 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="JogoDeTalheres-Prop13" type="Sprite" parent="Tables/conjGrandeMesa3"]
+position = Vector2( 4529, -2302 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="JogoDeTalheres-Prop14" type="Sprite" parent="Tables/conjGrandeMesa3"]
+position = Vector2( 4634, -2242 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="JogoDeTalheres-Prop15" type="Sprite" parent="Tables/conjGrandeMesa3"]
+position = Vector2( 4749, -2182 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 75 )
+
+[node name="Tables2" type="Node2D" parent="."]
+position = Vector2( -3975, 1340 )
+
+[node name="conjMesa1" parent="Tables2" instance=ExtResource( 5 )]
+position = Vector2( 4375, -1390 )
+
+[node name="conjMesa8" parent="Tables2" instance=ExtResource( 5 )]
+position = Vector2( 6780, 4.99976 )
+
+[node name="conjMesa3" parent="Tables2" instance=ExtResource( 7 )]
+position = Vector2( 4370, -460 )
+
+[node name="conjMesa10" parent="Tables2" instance=ExtResource( 7 )]
+position = Vector2( 5185, -1815 )
+
+[node name="conjMesa4" parent="Tables2" instance=ExtResource( 8 )]
+position = Vector2( 5160, -960 )
+
+[node name="conjMesa5" parent="Tables2" instance=ExtResource( 12 )]
+position = Vector2( 3575, -955 )
+
+[node name="conjMesa6" parent="Tables2" instance=ExtResource( 9 )]
+position = Vector2( 5180, 10 )
+
+[node name="conjMesa9" parent="Tables2" instance=ExtResource( 8 )]
+position = Vector2( 5985, -480 )
 
 [node name="WallDetails" type="Node2D" parent="."]
 
@@ -313,6 +449,11 @@ texture = ExtResource( 11 )
 
 [node name="Kitchen" type="Node2D" parent="."]
 
+[node name="Ilha-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2275, -1975 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 4 )
+
 [node name="BancadaFogãO-Prop" type="Sprite" parent="Kitchen"]
 position = Vector2( 2965, -2395 )
 texture = ExtResource( 38 )
@@ -320,6 +461,11 @@ texture = ExtResource( 38 )
 [node name="Bancada+Pia-Prop" type="Sprite" parent="Kitchen"]
 position = Vector2( 1840, -2450 )
 texture = ExtResource( 37 )
+
+[node name="CestaDeVazia-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1605, -2385 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 77 )
 
 [node name="Geladeira-Prop" type="Sprite" parent="Kitchen"]
 position = Vector2( 1280, -2155 )
@@ -329,21 +475,237 @@ texture = ExtResource( 36 )
 position = Vector2( 1670, -2565 )
 texture = ExtResource( 39 )
 
+[node name="BlocParedeFogãO-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 3080, -2870 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 40 )
+
+[node name="Faca-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1795, -2465 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 59 )
+
+[node name="PanoDePratoAzul-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2285, -2910 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 56 )
+
+[node name="PanoDePratoVerde-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2231, -2878 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 46 )
+
+[node name="PanoDePratoLaranja-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2176, -2845 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 52 )
+
 [node name="Prateleira" type="Node2D" parent="Kitchen"]
 position = Vector2( 5, -70 )
 
-[node name="PrateleiraLataParedeFogãO-Prop" type="Sprite" parent="Kitchen/Prateleira"]
-position = Vector2( 3128, -3086.5 )
-texture = ExtResource( 33 )
-
 [node name="PrateleiraAltaParedePia-Prop" type="Sprite" parent="Kitchen/Prateleira"]
-position = Vector2( 1678, -3066.5 )
+position = Vector2( 1663, -3097.5 )
 texture = ExtResource( 32 )
 
 [node name="PrateleiraBaixaParedePia-Prop" type="Sprite" parent="Kitchen/Prateleira"]
-position = Vector2( 1988, -2887 )
+position = Vector2( 1805, -2825 )
 texture = ExtResource( 34 )
 
-[node name="PrateleiraBaixaFogãO-Prop" type="Sprite" parent="Kitchen/Prateleira"]
-position = Vector2( 2923, -2812 )
+[node name="BlocJogoPanelasMarrons-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2250, -3583 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 43 )
+
+[node name="BlocJogoPanelasColors-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1760, -3291 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 42 )
+
+[node name="BlocJogoPanelasPretas-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1220, -3001 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 41 )
+
+[node name="BancadaBebidasEPagamento-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2600, -1470 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 33 )
+
+[node name="BancadaEntregas-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1495, -1520 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 35 )
+
+[node name="Bloc-BandejaSuporteClientes-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1020, -1900 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 57 )
+
+[node name="BlocPratosMarrons-Prop2" type="Sprite" parent="Kitchen"]
+position = Vector2( 2195, -3235 )
+scale = Vector2( 0.999998, 0.999998 )
+texture = ExtResource( 61 )
+
+[node name="BlocPratosMarrons-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2295, -3190 )
+scale = Vector2( 0.999998, 0.999998 )
+texture = ExtResource( 61 )
+
+[node name="PblocPratosPretos-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2110, -3180 )
+scale = Vector2( 0.999998, 0.999998 )
+texture = ExtResource( 60 )
+
+[node name="PblocPratosPretos-Prop2" type="Sprite" parent="Kitchen"]
+position = Vector2( 2200, -3130 )
+scale = Vector2( 0.999998, 0.999998 )
+texture = ExtResource( 60 )
+
+[node name="BlocPratosColors-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2005, -3115 )
+scale = Vector2( 0.999998, 0.999998 )
+texture = ExtResource( 58 )
+
+[node name="BlocPratosColors-Prop2" type="Sprite" parent="Kitchen"]
+position = Vector2( 2115, -3085 )
+scale = Vector2( 0.999998, 0.999998 )
+texture = ExtResource( 58 )
+
+[node name="BlocBolsMarrons-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1995, -3040 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 49 )
+
+[node name="BlocBolsPretos-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1945, -3015 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 50 )
+
+[node name="BlocBolsColors-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1900, -2995 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 55 )
+
+[node name="BlocTaçAsVidroVermelho-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1855, -2970 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 54 )
+
+[node name="BlocTaçAsVidroAzul-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1790, -2935 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 51 )
+
+[node name="BlocCoposVidroVermelho-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1725, -2880 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 47 )
+
+[node name="BlocCoposVidroAzul-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1655, -2850 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 53 )
+
+[node name="BlocXíCarasPretas-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1565, -2795 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 44 )
+
+[node name="BlocXíCarsColors-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1465, -2745 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 48 )
+
+[node name="BlocXíCarasBrancas-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1365, -2690 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 45 )
+
+[node name="CaixaRegistradoraLigada-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2890, -1755 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 66 )
+
+[node name="MaquinaDeBebida08-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2730, -1675 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 62 )
+
+[node name="MaquinaDeBebida07-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2665, -1640 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 65 )
+
+[node name="MaquinaDeBebida06-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2600, -1605 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 64 )
+
+[node name="MaquinaDeBebida05-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2535, -1570 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 63 )
+
+[node name="MaquinaDeBebida04-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2470, -1535 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 69 )
+
+[node name="MaquinaDeBebida03-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2405, -1500 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 67 )
+
+[node name="MaquinaDeBebida02-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2340, -1465 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 70 )
+
+[node name="MaquinaDeBebida01-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2275, -1430 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 68 )
+
+[node name="BlocPratosMarrons-Prop3" type="Sprite" parent="Kitchen"]
+position = Vector2( 2085, -1975 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 61 )
+
+[node name="PblocPratosPretos-Prop3" type="Sprite" parent="Kitchen/BlocPratosMarrons-Prop3"]
+position = Vector2( -145, 15 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 60 )
+
+[node name="BlocPratosColors-Prop" type="Sprite" parent="Kitchen/BlocPratosMarrons-Prop3/PblocPratosPretos-Prop3"]
+position = Vector2( 120, 54.9999 )
+texture = ExtResource( 58 )
+
+[node name="CardáPio-Prop2" type="Sprite" parent="Kitchen"]
+position = Vector2( 1875, -1345 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 76 )
+
+[node name="MaquinaDeCafé-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2090, -1340 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 72 )
+
+[node name="AcarajéPronto-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1685, -1495 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 73 )
+
+[node name="EgusiPronto-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1545, -1565 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 71 )
+
+[node name="MungunzáPronto-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 1410, -1635 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 74 )
+
+[node name="CardáPio-Prop" type="Sprite" parent="Kitchen"]
+position = Vector2( 2090, -1460 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 76 )

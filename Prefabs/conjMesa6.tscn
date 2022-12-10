@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS SALAO RESTAURANTE/CADEIRA LARANJA 01 - PROP.png" type="Texture" id=1]
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS SALAO RESTAURANTE/CADEIRA LARANJA 02 - PROP.png" type="Texture" id=2]
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS SALAO RESTAURANTE/MESA 01 - PROP.png" type="Texture" id=3]
+[ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/JOGO DE TALHERES - PROP.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 259.0
@@ -21,6 +22,15 @@ texture = ExtResource( 2 )
 [node name="Mesa01-Prop" type="Sprite" parent="."]
 position = Vector2( 0, 30 )
 texture = ExtResource( 3 )
+
+[node name="JogoDeTalheres-Prop" type="Sprite" parent="."]
+position = Vector2( 120.286, -14.1654 )
+texture = ExtResource( 4 )
+
+[node name="JogoDeTalheres-Prop2" type="Sprite" parent="."]
+position = Vector2( -111.714, -26.1653 )
+rotation = -2.05107
+texture = ExtResource( 4 )
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 0, 30 )
