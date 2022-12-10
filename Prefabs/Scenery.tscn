@@ -9,7 +9,7 @@
 [ext_resource path="res://Prefabs/conjMesa3.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/conjMesa4.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/conjMesa6.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Images/sketch1670276377744 verde1.png" type="Texture" id=10]
+[ext_resource path="res://Images/Identidade Visual/sketch1670276377744 verde1.png" type="Texture" id=10]
 [ext_resource path="res://Images/Raquel - Cenários/ESTRUTUTA/COLUNA - PROP.png" type="Texture" id=11]
 [ext_resource path="res://Prefabs/conjMesa5.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE PIA/PORTA BANHEIRO FEMININO - PROP.png" type="Texture" id=13]
@@ -77,6 +77,7 @@
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS EM BLOCO/JOGO DE TALHERES - PROP.png" type="Texture" id=75]
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS BANCADA ENTREGA/CARDÁPIO - PROP.png" type="Texture" id=76]
 [ext_resource path="res://Images/Raquel - Cenários/OBJETOS PAREDE FOGÃO/CESTA DE VAZIA - PROP.png" type="Texture" id=77]
+
 
 [node name="Scenery" type="Node2D"]
 scale = Vector2( 0.2, 0.2 )

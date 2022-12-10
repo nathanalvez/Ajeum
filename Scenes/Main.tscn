@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Images/Personagens/Sprite_Lude_Milla_Espelhado.png" type="Texture" id=1]
 [ext_resource path="res://Images/Personagens/Sprite_Lude_Milla.png" type="Texture" id=2]
 [ext_resource path="res://HUD's/HUD_Main.tscn" type="PackedScene" id=3]
+[ext_resource path="res://HUD's/Styles/Fonte_Caixas_de_Dialogo.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Scripts/ClientManager.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/path.gd" type="Script" id=9]
 [ext_resource path="res://Prefabs/Scenery.tscn" type="PackedScene" id=10]
@@ -13,14 +14,14 @@ radius = 14.1421
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "esquerda",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "esquerda",
 "speed": 5.0
 } ]
 
@@ -52,6 +53,12 @@ __meta__ = {
 position = Vector2( 136, 543 )
 
 [node name="HUD_Main" parent="." instance=ExtResource( 3 )]
+
+[node name="Menu" parent="HUD_Main" index="12"]
+visible = true
+
+[node name="Configuracoes" parent="HUD_Main/Menu/TextureRect" index="0"]
+custom_fonts/font = ExtResource( 4 )
 
 [node name="default_client" type="KinematicBody2D" parent="."]
 position = Vector2( -132, 438 )
