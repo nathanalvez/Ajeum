@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Images/Personagens/Sprite_Lude_Milla_Espelhado.png" type="Texture" id=1]
 [ext_resource path="res://Images/Personagens/Sprite_Lude_Milla.png" type="Texture" id=2]
 [ext_resource path="res://HUD's/HUD_Main.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Images/Raquel - Cenários/quadros1.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/ClientManager.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/path.gd" type="Script" id=9]
 [ext_resource path="res://Prefabs/Scenery.tscn" type="PackedScene" id=10]
@@ -26,7 +27,7 @@ animations = [ {
 
 [sub_resource type="Curve2D" id=12]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -68, 466, -75.205, 26.9391, 75.205, -26.9391, 174, 372, -77.4499, -2.24492, 77.4499, 2.24492, 334, 335, -51.6333, -4.48985, 51.6333, 4.48985, 485, 383, -57.2456, 22.4492, 57.2456, -22.4492, 654, 358, -68.974, 4.75683, 68.974, -4.75683, 837, 258, -17.8381, -16.6489, 17.8381, 16.6489, 957, 304, -16.6489, -14.2705, 16.6489, 14.2705, 1093, 401, -13.0813, -58.2711, 13.0813, 58.2711, 1318, 540, 17.8381, -9.51366, -17.8381, 9.51366, 1154, 698, 47.5683, -23.7841, -47.5683, 23.7841, 993, 779, 38.0546, -15.4597, -38.0546, 15.4597, 855, 849, 46.3791, 2.37841, -46.3791, -2.37841, 640, 897, 24.9733, 23.7841, -24.9733, -23.7841, 547, 853, 17.8381, 16.6489, -17.8381, -16.6489, 414, 732, 35.6762, 22.5949, -35.6762, -22.5949, 288, 660, 26.9391, 13.4695, -26.9391, -13.4695, 181, 573, 40.4086, -2.24492, -40.4086, 2.24492, 69, 539, 12.3471, 4.48985, -12.3471, -4.48985, -71, 484 )
+"points": PoolVector2Array( 0, 0, 0, 0, -68, 466, -75.205, 26.9391, 75.205, -26.9391, 174, 372, -77.4499, -2.24492, 77.4499, 2.24492, 334, 335, -51.6333, -4.48985, 51.6333, 4.48985, 485, 383, -57.2456, 22.4492, 57.2456, -22.4492, 654, 358, -68.974, 4.75683, 68.974, -4.75683, 837, 258, -17.8381, -16.6489, 17.8381, 16.6489, 957, 304, -16.6489, -14.2705, 16.6489, 14.2705, 1093, 401, -13.0813, -58.2711, 13.0813, 58.2711, 1318, 540, 17.8381, -9.51366, -17.8381, 9.51366, 1154, 698, 47.5683, -23.7841, -47.5683, 23.7841, 993, 779, 38.0546, -15.4597, -38.0546, 15.4597, 855, 849, 46.3791, 2.37841, -46.3791, -2.37841, 640, 897, 24.9733, 23.7841, -24.9733, -23.7841, 547, 853, 17.8381, 16.6489, -17.8381, -16.6489, 414, 732, 35.6762, 22.5949, -35.6762, -22.5949, 288, 660, 26.9391, 13.4695, -26.9391, -13.4695, 181, 573, 40.4086, -2.24492, -40.4086, 2.24492, 69, 539, 12.3471, 4.48985, -12.3471, -4.48985, -69, 468 )
 }
 
 [sub_resource type="CircleShape2D" id=7]
@@ -37,10 +38,10 @@ radius = 34.0588
 [sub_resource type="CircleShape2D" id=10]
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 643, 10 )
+extents = Vector2( 696.5, 10 )
 
 [sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 10.5, 457.5 )
+extents = Vector2( 10.5, 518 )
 
 [node name="Scene" type="Node2D"]
 __meta__ = {
@@ -50,6 +51,11 @@ __meta__ = {
 
 [node name="Scenery" parent="." instance=ExtResource( 10 )]
 position = Vector2( 136, 543 )
+
+[node name="Quadros1" type="Sprite" parent="."]
+position = Vector2( -83, 291 )
+scale = Vector2( 0.94, 0.94 )
+texture = ExtResource( 4 )
 
 [node name="HUD_Main" parent="." instance=ExtResource( 3 )]
 
@@ -85,14 +91,27 @@ position = Vector2( 1324, 557 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="anim"]
 shape = SubResource( 8 )
 
+[node name="Stop1" type="Area2D" parent="."]
+position = Vector2( 522, 382 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stop1"]
+shape = SubResource( 8 )
+
+[node name="Stop2" type="Area2D" parent="."]
+position = Vector2( 872, 837 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stop2"]
+shape = SubResource( 8 )
+
 [node name="CameraControler" type="KinematicBody2D" parent="."]
-position = Vector2( 621, 452 )
+position = Vector2( -58, 402 )
 collision_layer = 8
 collision_mask = 8
 script = ExtResource( 11 )
 
 [node name="Camera2D" type="Camera2D" parent="CameraControler"]
 current = true
+zoom = Vector2( 0.5, 0.5 )
 limit_left = -450
 limit_top = -300
 limit_right = 1700
@@ -110,19 +129,39 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraControlerLimit/StaticBody2D"]
-position = Vector2( 627, 48 )
+position = Vector2( 613, -136 )
 shape = SubResource( 9 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="CameraControlerLimit/StaticBody2D"]
-position = Vector2( 697, 811 )
+position = Vector2( 609, 957 )
 shape = SubResource( 9 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CameraControlerLimit/StaticBody2D"]
-position = Vector2( 212, 426 )
+position = Vector2( -145, 411 )
 shape = SubResource( 11 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="CameraControlerLimit/StaticBody2D"]
-position = Vector2( 1072, 419 )
+position = Vector2( 1384, 418 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="CameraControlerLimit/StaticBody2D"]
+position = Vector2( 1047, 867 )
+rotation = 1.04246
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="CameraControlerLimit/StaticBody2D"]
+position = Vector2( 185, 873 )
+rotation = 2.0998
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="CameraControlerLimit/StaticBody2D"]
+position = Vector2( 165, -8 )
+rotation = 1.04591
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="CameraControlerLimit/StaticBody2D"]
+position = Vector2( 1102, -3 )
+rotation = 2.08213
 shape = SubResource( 11 )
 
 [node name="SpawnPoint" type="Node2D" parent="."]
@@ -130,5 +169,7 @@ position = Vector2( 1278, 697 )
 
 [connection signal="PathOffset" from="default_client" to="path1/path_follow" method="_on_default_client_PathOffset"]
 [connection signal="body_entered" from="anim" to="default_client" method="_on_Table_body_entered"]
+[connection signal="body_entered" from="Stop1" to="default_client" method="_on_Stop1_body_entered"]
+[connection signal="body_entered" from="Stop2" to="default_client" method="_on_Stop2_body_entered"]
 
 [editable path="HUD_Main"]

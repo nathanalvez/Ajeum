@@ -20,7 +20,7 @@ export var paths = []
 
 var pathToFollow = Vector2()
 var myPosition = Vector2()
-var speed = 200
+var speed = 70
 var count = 0
 
 func _ready():
@@ -49,7 +49,8 @@ func Walking():
 
 func OnTable():
 	count += 0.1
-	if count > 10:
+	if count > 20:
+		count = 0
 		state = States.walking
 	print(count)
 
@@ -59,3 +60,11 @@ func SignalsEmit():
 
 func _on_Table_body_entered(body):
 	$AnimatedSprite.play("esquerda")
+
+
+func _on_Stop1_body_entered(body):
+	state = States.onTable
+
+
+func _on_Stop2_body_entered(body):
+	state = States.onTable

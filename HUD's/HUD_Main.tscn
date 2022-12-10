@@ -58,10 +58,10 @@
 [node name="HUD_Main" type="CanvasLayer"]
 
 [node name="Ornamento2" type="TextureRect" parent="."]
-margin_left = 287.0
-margin_top = 573.0
-margin_right = 1057.0
-margin_bottom = 747.0
+margin_left = 285.0
+margin_top = 609.0
+margin_right = 1055.0
+margin_bottom = 783.0
 rect_scale = Vector2( 0.901839, 0.901839 )
 texture = ExtResource( 25 )
 expand = true
