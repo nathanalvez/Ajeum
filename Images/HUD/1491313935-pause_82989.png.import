@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/1491313935-pause_82989.png-5cf7c1995827208ff10f0e0234d647da.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Images/HUD/1491313935-pause_82989.png"
+dest_files=[ "res://.import/1491313935-pause_82989.png-5cf7c1995827208ff10f0e0234d647da.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

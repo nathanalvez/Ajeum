@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Capa_Ajeum_Itch.png-30477f08ca65a3b2a3bc3a8c26544d2f.stex"
+path="res://.import/pausa preenchido(512×512).png-2c74461acc3c070ec6727a73286ad938.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Capa_Ajeum_Itch.png"
-dest_files=[ "res://.import/Capa_Ajeum_Itch.png-30477f08ca65a3b2a3bc3a8c26544d2f.stex" ]
+source_file="res://Images/HUD/pausa preenchido(512×512).png"
+dest_files=[ "res://.import/pausa preenchido(512×512).png-2c74461acc3c070ec6727a73286ad938.stex" ]
 
 [params]
 

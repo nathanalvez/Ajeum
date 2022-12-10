@@ -45,7 +45,7 @@ scale = Vector2( 0.2, 0.2 )
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 2470, -530 )
-scale = Vector2( 5, 5 )
+scale = Vector2( 3.55721, 3.55721 )
 texture = ExtResource( 10 )
 
 [node name="ParedePia-Prop" type="Sprite" parent="."]
@@ -93,39 +93,30 @@ texture = ExtResource( 4 )
 
 [node name="Tables" type="Node2D" parent="."]
 position = Vector2( 0, 885 )
-scale = Vector2( 1, 1 )
 
 [node name="conjMesa1" parent="Tables" instance=ExtResource( 5 )]
 position = Vector2( 4375, -1390 )
-scale = Vector2( 1, 1 )
 
 [node name="conjMesa8" parent="Tables" instance=ExtResource( 5 )]
 position = Vector2( 2785, -455 )
-scale = Vector2( 1, 1 )
 
 [node name="conjMesa2" parent="Tables" instance=ExtResource( 6 )]
 position = Vector2( 2790, -1380 )
-scale = Vector2( 1, 1 )
 
 [node name="conjMesa3" parent="Tables" instance=ExtResource( 7 )]
 position = Vector2( 4370, -460 )
-scale = Vector2( 1, 1 )
 
 [node name="conjMesa4" parent="Tables" instance=ExtResource( 8 )]
 position = Vector2( 5160, -960 )
-scale = Vector2( 1, 1 )
 
 [node name="conjMesa5" parent="Tables" instance=ExtResource( 12 )]
 position = Vector2( 3575, -955 )
-scale = Vector2( 1, 1 )
 
 [node name="conjMesa6" parent="Tables" instance=ExtResource( 9 )]
 position = Vector2( 3575, -25 )
-scale = Vector2( 1, 1 )
 
 [node name="conjMesa7" parent="Tables" instance=ExtResource( 9 )]
 position = Vector2( 3580, -1865 )
-scale = Vector2( 1, 1 )
 
 [node name="conjMesa9" parent="Tables" instance=ExtResource( 8 )]
 position = Vector2( 2000, -935 )
@@ -244,7 +235,6 @@ rotation = -0.0374146
 texture = ExtResource( 26 )
 
 [node name="WallDetails" type="Node2D" parent="."]
-scale = Vector2( 1, 1 )
 
 [node name="BMasc" type="Sprite" parent="WallDetails"]
 position = Vector2( -183.8, -1532 )
@@ -263,7 +253,6 @@ texture = ExtResource( 13 )
 
 [node name="Qudro05-Prop" type="Sprite" parent="WallDetails"]
 position = Vector2( -485, -1270 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 18 )
 
 [node name="Quadro03-Prop" type="Sprite" parent="WallDetails"]
@@ -306,12 +295,10 @@ texture = ExtResource( 23 )
 
 [node name="Qudro05-Prop2" type="Sprite" parent="WallDetails"]
 position = Vector2( -1785, -615 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 18 )
 
 [node name="Tambô-Prop" type="Sprite" parent="WallDetails"]
 position = Vector2( -745, -1065 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 24 )
 
 [node name="Coluna-Prop" type="Sprite" parent="."]
@@ -328,22 +315,18 @@ texture = ExtResource( 11 )
 
 [node name="BancadaFogãO-Prop" type="Sprite" parent="Kitchen"]
 position = Vector2( 2965, -2395 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 38 )
 
 [node name="Bancada+Pia-Prop" type="Sprite" parent="Kitchen"]
 position = Vector2( 1840, -2450 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 37 )
 
 [node name="Geladeira-Prop" type="Sprite" parent="Kitchen"]
 position = Vector2( 1280, -2155 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 36 )
 
 [node name="TáBuaDeMadeira-Prop" type="Sprite" parent="Kitchen"]
 position = Vector2( 1670, -2565 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 39 )
 
 [node name="Prateleira" type="Node2D" parent="Kitchen"]
@@ -351,20 +334,16 @@ position = Vector2( 5, -70 )
 
 [node name="PrateleiraLataParedeFogãO-Prop" type="Sprite" parent="Kitchen/Prateleira"]
 position = Vector2( 3128, -3086.5 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 33 )
 
 [node name="PrateleiraAltaParedePia-Prop" type="Sprite" parent="Kitchen/Prateleira"]
 position = Vector2( 1678, -3066.5 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 32 )
 
 [node name="PrateleiraBaixaParedePia-Prop" type="Sprite" parent="Kitchen/Prateleira"]
 position = Vector2( 1988, -2887 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 34 )
 
 [node name="PrateleiraBaixaFogãO-Prop" type="Sprite" parent="Kitchen/Prateleira"]
 position = Vector2( 2923, -2812 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 35 )

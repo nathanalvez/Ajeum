@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sprite_Ayo.png-534c4b72116e09b191af7ba9f628bd75.stex"
+path="res://.import/rounded2.png-1f059183027f047a3f2a052f514ffb3d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Sprite_Ayo.png"
-dest_files=[ "res://.import/Sprite_Ayo.png-534c4b72116e09b191af7ba9f628bd75.stex" ]
+source_file="res://Images/HUD/rounded2.png"
+dest_files=[ "res://.import/rounded2.png-1f059183027f047a3f2a052f514ffb3d.stex" ]
 
 [params]
 

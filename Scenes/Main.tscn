@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
+[ext_resource path="res://Images/Personagens/Sprite_Lude_Milla_Espelhado.png" type="Texture" id=1]
+[ext_resource path="res://Images/Personagens/Sprite_Lude_Milla.png" type="Texture" id=2]
 [ext_resource path="res://HUD's/HUD_Main.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Images/button-15388.png" type="Texture" id=5]
-[ext_resource path="res://Images/placeholders/bear.png" type="Texture" id=6]
 [ext_resource path="res://Scripts/ClientManager.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/path.gd" type="Script" id=9]
 [ext_resource path="res://Prefabs/Scenery.tscn" type="PackedScene" id=10]
@@ -12,7 +13,7 @@
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -43,22 +44,23 @@ __meta__ = {
 }
 
 [node name="Scenery" parent="." instance=ExtResource( 10 )]
-position = Vector2( 139, 543 )
+position = Vector2( 136, 543 )
 
 [node name="HUD_Main" parent="." instance=ExtResource( 3 )]
 
-[node name="Nivel" parent="HUD_Main" index="1"]
+[node name="Nivel" parent="HUD_Main" index="7"]
 texture = ExtResource( 5 )
 
 [node name="default_client" type="KinematicBody2D" parent="."]
-position = Vector2( 890, 571 )
+position = Vector2( 102, 249 )
+scale = Vector2( 0.8, 0.8 )
 script = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="default_client"]
 shape = SubResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="default_client"]
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.135381, 0.135381 )
 frames = SubResource( 5 )
 
 [node name="path1" type="Path2D" parent="."]
@@ -66,7 +68,7 @@ curve = SubResource( 6 )
 
 [node name="path_follow" type="PathFollow2D" parent="path1"]
 position = Vector2( 172, 348 )
-rotation = -0.797187
+rotation = -0.79719
 loop = false
 script = ExtResource( 9 )
 

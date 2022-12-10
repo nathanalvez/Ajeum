@@ -10,34 +10,32 @@
 [node name="HUD_StartScene" type="CanvasLayer"]
 
 [node name="BackgroundAjeum" type="Sprite" parent="."]
-position = Vector2( 640.5, 363.5 )
-scale = Vector2( 0.420297, 0.287963 )
+position = Vector2( 634, 342 )
+scale = Vector2( 0.420297, 0.372006 )
 texture = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Sketch1670276441646" type="Sprite" parent="."]
 position = Vector2( 859.099, 355.5 )
 scale = Vector2( 0.293145, 0.293145 )
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Start_Button" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -92.0
-margin_top = -163.0
-margin_right = 103.0
-margin_bottom = -76.0
+margin_left = -154.0
+margin_top = -128.0
+margin_right = 264.114
+margin_bottom = -4.99988
+rect_scale = Vector2( 0.660859, 0.660859 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = ExtResource( 1 )
 custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
 custom_styles/normal = ExtResource( 3 )
-text = "Start"
+text = " Jogar"
+icon_align = 1
 script = ExtResource( 4 )
 
 [node name="Name" type="Label" parent="."]
